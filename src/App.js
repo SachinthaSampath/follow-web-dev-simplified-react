@@ -1,7 +1,10 @@
+import { useEffect, useState } from 'react';
 import UseDebounce from './components/UseDebounce';
 import UseLocalStorage from './components/UseLocalStorage';
 import UseTimeOut from './components/UseTimeOut';
 import UseToggle from './components/UseToggle';
+import UseUpdateEffect from './components/UseUpdateEffect';
+import UseArray from './components/UseArray';
 
 function App() {
   return (
@@ -9,7 +12,9 @@ function App() {
       {/* <UseLocalStorage /> */}
       {/* <UseToggle /> */}
       {/* <UseTimeOut/> */}
-      <UseDebounce />
+      {/* <UseDebounce /> */}
+      {/* <UseUpdateEffect /> */}
+      <UseArray />
     </div>
   );
 }
