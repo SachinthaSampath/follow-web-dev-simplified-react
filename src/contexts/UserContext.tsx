@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
-import { createContext, Dispatch, SetStateAction, useState } from 'react';
+'use client';
+import React, { createContext, useContext, useState } from 'react';
 
+//create user type
 export type User = {
   name: string;
   username: string;
@@ -8,17 +9,21 @@ export type User = {
   isLoggedIn?: boolean;
 };
 
+// create user context properties
 export interface UserCTXProps {
   user: User | null;
-  setUser: (user: User) => void;
+  setUser: (user: Partial<User> | null) => void;
 }
 
+// create user provider properties
 type UserProviderProps = {
   children: React.ReactNode;
 };
 
+//create user context
 export const UserContext = createContext<UserCTXProps | null>(null);
 
+//custom hook to access properties from outside
 const useUserContext = (): UserCTXProps => {
   const context = useContext(UserContext);
   if (!context) {
@@ -27,11 +32,15 @@ const useUserContext = (): UserCTXProps => {
   return { ...context };
 };
 
-const UserProvider: React.FC<UserProviderProps> = ({ children }: UserProviderProps) => {
+const UserProvider: React.FC<UserProviderProps> = ({
+  children,
+}: UserProviderProps) => {
+  // create user state
   const [user, setUser] = useState<User | null>(null);
 
-  const updateUser = (user: User) => {
-    setUser((prev) => (user ? { ...prev, ...user } : null));
+  // function to update user
+  const updateUser = (user: Partial<User> | null) => {
+    setUser((prev) => (user ? ({ ...prev, ...user } as User) : null));
   };
 
   const data = { user: user, setUser: updateUser };
@@ -39,4 +48,4 @@ const UserProvider: React.FC<UserProviderProps> = ({ children }: UserProviderPro
   return <UserContext.Provider value={data}>{children}</UserContext.Provider>;
 };
 
-export { useUserContext, UserProvider };
+export { UserProvider, useUserContext };

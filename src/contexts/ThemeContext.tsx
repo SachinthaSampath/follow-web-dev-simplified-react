@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from 'react';
 
 const ThemeContext = createContext(false);
-const ThemeUpdateContext = createContext();
+const ThemeUpdateContext = createContext<any>(undefined);
 
 export function useTheme() {
   return useContext(ThemeContext);
@@ -20,7 +20,9 @@ export function ThemeProvider({ children }) {
 
   return (
     <ThemeContext.Provider value={darkTheme}>
-      <ThemeUpdateContext.Provider value={toggleTheme}>{children}</ThemeUpdateContext.Provider>
+      <ThemeUpdateContext.Provider value={toggleTheme}>
+        {children}
+      </ThemeUpdateContext.Provider>
     </ThemeContext.Provider>
   );
 }
