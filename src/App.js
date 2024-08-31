@@ -6,6 +6,7 @@ import UseToggle from './components/UseToggle';
 import UseUpdateEffect from './components/UseUpdateEffect';
 import UseArray from './components/UseArray';
 import UsePreviousComponent from './6-usePrevious/UsePreviousComponent';
+import UseStateWithHistoryComponent from './7-useStateWithHistory/UseStateWithHistoryComponent';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <UseDebounce /> */}
       {/* <UseUpdateEffect /> */}
       {/* <UseArray /> */}
-      <UsePreviousComponent />
+      {/* <UsePreviousComponent /> */}
+      <UseStateWithHistoryComponent />
     </div>
   );
 }
