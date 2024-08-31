@@ -5,6 +5,7 @@ import UseTimeOut from './components/UseTimeOut';
 import UseToggle from './components/UseToggle';
 import UseUpdateEffect from './components/UseUpdateEffect';
 import UseArray from './components/UseArray';
+import UsePreviousComponent from './6-usePrevious/UsePreviousComponent';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <UseTimeOut/> */}
       {/* <UseDebounce /> */}
       {/* <UseUpdateEffect /> */}
-      <UseArray />
+      {/* <UseArray /> */}
+      <UsePreviousComponent />
     </div>
   );
 }
