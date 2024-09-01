@@ -1,4 +1,5 @@
 import UseToggleComponent from './1-useToggle/UseToggleComponent';
+import UseFetchComponent from './10-useFetch/UseFetchComponent';
 import UsePreviousComponent from './6-usePrevious/UsePreviousComponent';
 import UseStateWithHistoryComponent from './7-useStateWithHistory/UseStateWithHistoryComponent';
 import UseStorageComponent from './7-useStorage/UseStorageComponent';
@@ -16,7 +17,8 @@ function App() {
       {/* <UsePreviousComponent /> */}
       {/* <UseStateWithHistoryComponent /> */}
       {/* <UseStorageComponent /> */}
-      <UseAsyncComponent />
+      {/* <UseAsyncComponent /> */}
+      <UseFetchComponent />
     </div>
   );
 }
