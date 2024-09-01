@@ -1,7 +1,7 @@
 import React from 'react';
-import useArray from '../hooks/useArray';
+import useArray from './useArray';
 
-const UseArray = () => {
+const UseArrayComponent = () => {
   const { array, clear, filter, push, remove, set, update } = useArray([
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
   ]);
@@ -19,4 +19,4 @@ const UseArray = () => {
   );
 };
 
-export default UseArray;
+export default UseArrayComponent;

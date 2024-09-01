@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import useLocalStorage from '../hooks/useLocalStorage';
+import useLocalStorage from './useLocalStorage';
 
-const UseLocalStorage = () => {
+const UseLocalStorageComponent = () => {
   // manual approach
   const initialValue = 'Hello World';
   const key = 'name';
@@ -33,4 +33,4 @@ const UseLocalStorage = () => {
   );
 };
 
-export default UseLocalStorage;
+export default UseLocalStorageComponent;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import useUpdateEffect from '../hooks/useUpdateEffect';
+import useUpdateEffect from './useUpdateEffect';
 
-const UseUpdateEffect = () => {
+const UseUpdateEffectComponent = () => {
   const [count, setCount] = useState(0);
 
   useUpdateEffect(() => {
@@ -20,4 +20,4 @@ const UseUpdateEffect = () => {
   );
 };
 
-export default UseUpdateEffect;
+export default UseUpdateEffectComponent;

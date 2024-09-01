@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import useDebounce from '../hooks/useDebounce';
+import useDebounce from './useDebounce';
 
-const UseDebounce = () => {
+const UseDebounceComponent = () => {
 
   const [count, setCount] = useState(0);
   useDebounce(() => alert(count), 1000, [count]);
@@ -14,4 +14,4 @@ const UseDebounce = () => {
   );
 };
 
-export default UseDebounce;
+export default UseDebounceComponent;
