@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import useStateWithHistory from './useStateWithHistory';
 
 const UseStateWithHistoryComponent = () => {
+  // Normal state type with other tools
   const [count, setCount, { history, pointer, back, forward, go }] =
     useStateWithHistory(1);
+
+  // change of name does not affect the history
   const [name, setName] = useState('John');
+
   return (
     <div>
       <div>{count}</div>

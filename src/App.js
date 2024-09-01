@@ -1,24 +1,20 @@
-import { useEffect, useState } from 'react';
-import UseDebounce from './components/UseDebounce';
-import UseLocalStorage from './components/UseLocalStorage';
-import UseTimeOut from './components/UseTimeOut';
-import UseToggle from './components/UseToggle';
-import UseUpdateEffect from './components/UseUpdateEffect';
-import UseArray from './components/UseArray';
+import UseToggleComponent from './1-useToggle/UseToggleComponent';
 import UsePreviousComponent from './6-usePrevious/UsePreviousComponent';
 import UseStateWithHistoryComponent from './7-useStateWithHistory/UseStateWithHistoryComponent';
+import UseStorageComponent from './7-useStorage/UseStorageComponent';
 
 function App() {
   return (
     <div className="App">
+      {/* <UseToggleComponent /> */}
       {/* <UseLocalStorage /> */}
-      {/* <UseToggle /> */}
       {/* <UseTimeOut/> */}
       {/* <UseDebounce /> */}
       {/* <UseUpdateEffect /> */}
       {/* <UseArray /> */}
       {/* <UsePreviousComponent /> */}
-      <UseStateWithHistoryComponent />
+      {/* <UseStateWithHistoryComponent /> */}
+      <UseStorageComponent />
     </div>
   );
 }

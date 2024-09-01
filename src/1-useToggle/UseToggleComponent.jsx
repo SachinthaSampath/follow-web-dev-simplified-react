@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useToggle } from '../hooks/useToggle';
+import { useToggle } from './useToggle';
 
-const UseToggle = () => {
+
+const UseToggleComponent = () => {
   const [toggle, setToggle] = useToggle(false);
   return (
     <div>
@@ -13,4 +14,4 @@ const UseToggle = () => {
   );
 };
 
-export default UseToggle;
+export default UseToggleComponent;
